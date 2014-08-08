@@ -6,16 +6,11 @@ Install dotfiles
 
 1) Clone the repository
 ```shell
-git clone https://github.com/eohland/dotfiles.git ~/.dotfiles
-```
-2) Retrieve the bundles
-```shell
-cd ~/.dotfiles
-git submodule init
-git submodule update
+git clone --recurse-submodules https://github.com/eohland/dotfiles.git ~/.dotfiles
 ```
 
-3) Make the links
+2) Make the links
 ```
+cd ~/.dotfiles
 ./link.sh
 ```
