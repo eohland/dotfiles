@@ -92,7 +92,7 @@ nnoremap <C-l> :TlistToggle<CR>
 " Pathogen runtime path manupulation
 execute pathogen#infect()
 
-" Airline configuration
+" Airline settings
 set laststatus=2
 set ttimeoutlen=50
 set noshowmode
