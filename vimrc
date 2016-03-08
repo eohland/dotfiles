@@ -101,5 +101,24 @@ let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
 let g:airline#extensions#tabline#enabled = 1
 
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+  \ "mode": "passive"}
+nnoremap <C-k> :SyntasticCheck<CR>
+
+" Taglist settings
+let Tlist_Compact_Format = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Ctags_Cmd = '/opt/local/bin/ctags'
+nnoremap <C-l> :TlistToggle<CR>
+
 " auto-source .vimrc
 autocmd! bufwritepost .vimrc source %
